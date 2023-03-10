@@ -1,100 +1,71 @@
-
-<!doctype html>
-<html>
-	 <title>诗仙李白</title>
-	<head>
-		<head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>博客详情页</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/blog_detail.css">
 </head>
- <title>诗仙李白</title>
 <body>
-    <div class="box"></div>
-    <script>
-        function getTime() {
-            var date = new Date();
-            var year = date.getFullYear(); //获取年份
-            var month = date.getMonth() + 1; //获取月份
-            var day = date.getDate(); //获取日期
-            var hour = date.getHours(); //获取小时
-            hour = hour < 10 ? '0' + hour : hour;
-            var minute = date.getMinutes(); // 获取分
-            minute = minute < 10 ? '0' + minute : minute;
-            var seconds = date.getSeconds(); //获取秒
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-            return year + '年' + month + '月' + day + '日&nbsp;' + hour + ':' + minute + ':' + seconds;
-        }
- 
-        setInterval(function() {
-            document.querySelector('.box').innerHTML = getTime();
-        }, 1000)
-    </script>
-		<meta charset="UTF-8"/>
-		<meta name="keywords" content="李白,唐诗,静夜思,望庐山瀑布"/>
-		<meta name="description" content="有关于李白写的两首诗">
-		<title>诗仙李白</title>
-		
-	</head>
-	<body>
-	<center>
-		<h1><font color="pink" size="6">静夜思</font></h1>
-		<p><font color="purple">床前明月光，</font></p>
-		<p><font color="purple">疑是地上霜。</font></p>
-		<p><font color="purple">举头望明月，</font></p>
-		<p><font color="purple">低头思故乡。</font></p>
-		<hr/>
-		<h1><font color="red">望庐山瀑布</font></h1>
-		<p><font color="bule">
-		日照香炉生紫烟，<br/>
-		遥看瀑布挂前川。<br/>
-		飞流直下三千尺，<br/>
-		疑是银河落九天。<br/></font></p>
-		<hr/>
-		<h3>李白<h3>
-					<img src="https://i0.hdslb.com/bfs/archive/d47983e20a3f7125b4859fa72f648c4a3370716f.png" >
-
-	<meta name="referrer" content="no-referrer" />  
-	 
-			
-
-		<p>简介：李白（701年－762年） ，字太白，号青莲居士，又号“谪仙人”。<br/>
-		是唐代伟大的浪漫主义诗人，被后人誉为“诗仙”，与杜甫并称为“李杜”。<br/>
-		为了与另两位诗人李商隐与杜牧即“小李杜”区别，杜甫与李白又合称“大李杜”。<br/></p>
-		<p><a href="https://baike.baidu.com/item/%E6%9D%8E%E7%99%BD/1043">百度</a></p>
-	</center>
-		<p><a href="mailto:kevion989@qq.com1@qq.com">联系作者</a></p>
-		<p><a id="bottom" href="#">回到顶部</a></p>
-本站已勉强运行:
-<span id="momk"></span>
-<script language=javascript>
-function show_date_time(){
-window.setTimeout("show_date_time()", 1000);
-BirthDay=new Date("01-21-2023 23:32:13");  //建站日期
-today=new Date();
-timeold=(today.getTime()-BirthDay.getTime());
-sectimeold=timeold/1000
-secondsold=Math.floor(sectimeold);
-msPerDay=24*60*60*1000
-e_daysold=timeold/msPerDay
-daysold=Math.floor(e_daysold);
-e_hrsold=(daysold-e_daysold)*-24;
-hrsold=Math.floor(e_hrsold);
-e_minsold=(hrsold-e_hrsold)*-60;
-minsold=Math.floor((hrsold-e_hrsold)*-60);
-seconds=Math.floor((minsold-e_minsold)*-60);
-momk.innerHTML=daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒" ;
-}
-show_date_time();
-</script>
-<style>
-#momk{animation:change 10s infinite;font-weight:800; }
-@keyframes change{0%{color:#5cb85c;}25%{color:#556bd8;}50%{color:#e40707;}75%{color:#66e616;}100% {color:#67bd31;}}
-</style>
-		
-
-
-
-	</body>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <img src="image/log.png" alt="">
+        <span class="title">我的博客系统</span>
+         <!-- 使用 span 把左右两侧的元素给撑开 -->
+         <span class="spacer"></span>
+        <a href="blog_list.html">主页</a>
+        <a href="blog_edit.html">写博客</a>
+        <a href="blog_login.html">注销</a>
+    </div>
+    <!-- 版心 -->
+    <div class="container">
+        <!-- 左侧区域，显示用户信息 -->
+        <div class="container-left">
+            <!-- 用户详情 -->
+            <div class="card">
+                <!-- 用户的头像 -->
+                <img src="image/head.jpg" alt="">
+                <!-- 用户名 -->
+                <h3>吞吞吐吐大魔王</h3>
+                <!-- 其它信息 -->
+                <a href="https://blog.csdn.net/weixin_51367845?type=blog">CSDN 地址</a>
+                <a href="#">GitHub 地址</a>
+                <!-- 文章分类 -->
+                <div class="counter">
+                    <span>文章</span>
+                    <span>分类</span>
+                </div>
+                <div class="counter">
+                    <span>2</span>
+                    <span>1</span>
+                </div>
+            </div>
+        </div>
+        <!-- 右侧区域，显示博客列表 -->
+        <div class="container-right">
+            <!-- 使用这个 div 来放博客内容 -->
+            <div class="blog-content">
+                <!-- 博客的标题 -->
+                <h3>我的第一篇博客</h3>
+                <!-- 博客的日期 -->
+                <div class="date">2022-2-16</div>
+                <!-- 博客的内容 -->
+                <div class="detail">
+                    <p>
+                        中国人的性情是喜欢调和折中的，譬如你说，这屋子太暗，须在这里开一个窗，大家一定不允许的。但如果你主张拆掉屋顶他们就来调和，愿意开窗了。
+                    </p>
+                    <p>
+                        而忽而这些都空虚了，但有时故意地填以没奈何的自欺的希望。希望，希望，用这希望的盾，抗拒那空虚中的暗夜的袭来，虽然盾后面也依然是空虚中的暗夜。
+                    </p>
+                    <p>
+                        如果痛苦换来的是结识真理、坚持真理，就应自觉的欣然承受，那时，也只有那时，痛苦穿掘着灵魂的深处，使人受了精神底苦刑而得到创伤，又即从这得伤和养伤和愈合中，得到苦的涤除，而上了苏生的路。
+                    </p>
+                    <p>
+                        当我沉默着的时候，我觉得充实；我将开口，同时感到空虚。过去的生命已经死亡。我对于这死亡有大欢喜，因为我借此知道它曾经存活。死亡的生命已经朽腐。我对于这朽腐有大欢喜，因为我借此知道它还非空虚。
+                    </p>
+                </div>
+        </div>
+</body>
 </html>
